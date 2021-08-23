@@ -25,9 +25,14 @@ body {
     padding: 30px;
     border-radius: 10px;
 }
-
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
 .bg-violeta {
     background: var(--Moderate-violet);
+    position: relative;
 }
 .bg-violeta .img {
     border: 2px solid #9d6dd5;
@@ -72,6 +77,10 @@ body {
     width: 35px;
     height: 35px;
 }
+.card__texto {
+    position: relative;
+    z-index: 100;
+}
 
 .card__texto .subtiulo {
     font-size: 1.3em;
@@ -107,6 +116,10 @@ body {
         align-items: center;
         height: 100vh;
         margin: inherit;
+    }
+
+    .bg-pattern {
+        right: 100px;
     }
 
     .main {
