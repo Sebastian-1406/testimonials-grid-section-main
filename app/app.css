@@ -29,6 +29,9 @@ body {
 .bg-violeta {
     background: var(--Moderate-violet);
 }
+.bg-violeta .img {
+    border: 2px solid #9d6dd5;
+}
 .bg-grayish {
     background: var(--Very-dark-grayish-blue);
 }
@@ -37,6 +40,9 @@ body {
 }
 .bg-blackish {
     background: var(--Very-dark-blackish-blue);
+}
+.bg-blackish .img{
+    border: 2px solid #9d6dd5;
 }
 .text-grayish {
     color: var(--Very-dark-grayish-blue);
@@ -65,7 +71,6 @@ body {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    border: 2px solid #9d6dd5;
 }
 
 .card__texto .subtiulo {
@@ -81,3 +86,59 @@ body {
     font-weight: 500;
 }
 
+@media screen and (min-width:490px){
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .card {   
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    body {
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        height: 100vh;
+        margin: inherit;
+    }
+
+    .main {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat( 4, 270px);
+        grid-template-rows: repeat(2 , 280px);
+    }
+    .card{
+        width: auto;
+        padding: 35px;
+        padding: 30px;
+        padding-top: 25px;
+    }
+    .card__texto .cita {
+        font-size: 14px;
+    }
+
+    .bg-violeta {
+        grid-column: 1 / span 2;
+    }
+    .bg-blackish {
+        grid-column: 2  / span 2;
+    }
+
+    .card-kira{
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .card__texto .subtiulo {
+        font-size: 1.3em;
+    }
+    
+}
